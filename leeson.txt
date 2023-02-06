@@ -2,3 +2,7 @@ php artisan make:model Article -fm
 php artisan make:model Tag -fm
 php artisan make:model Comment -fm
 php artisan make:model State -fm
+
+ composer require barryvdh/laravel-ide-helper --dev
+ composer require barryvdh/laravel-debugbar --dev
+ php  artisan ui vue
