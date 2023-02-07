@@ -29,7 +29,7 @@
                                                 <div class="col-sm-4">
                                                     <div class="card p-1 border shadow-none">
                                                         <div class="p-3">
-                                                            <h5><a href="blog-details.html" class="text-dark">{{Str::limit($article->title,25)}}</a></h5>
+                                                            <h5><a href="{{route('articleShow',$article->id)}}" class="text-dark">{{Str::limit($article->title,20)}}</a></h5>
                                                             <p class="text-muted mb-0">{{$article->created_at->diffForHumans()}}</p>
                                                         </div>
 
@@ -40,13 +40,17 @@
                                                         <div class="p-3">
                                                             <ul class="list-inline">
                                                                 <li class="list-inline-item me-3">
-                                                                    <a href="javascript: void(0);" class="text-muted">
-                                                                        <i class="bx bx-heart align-middle text-muted me-1"></i> {{$article->state->likes}}
+                                                                    <a href="" class="text-muted">
+                                                                        <i class="fa-regular fa-heart"></i> {{$article->state->likes}}
+                                                                    </a>
+                                                                    <a href="" class="text-muted mx-2">
+
+                                                                        <i class="fa-solid fa-eye "></i> {{$article->state->views}}
                                                                     </a>
                                                                 </li>
                                                                 <li class="list-inline-item me-3">
-                                                                    <a href="javascript: void(0);" class="text-muted">
-                                                                        <i class="bx bx-comment-dots align-middle text-muted me-1"></i> {{$article->comments->count()}}
+                                                                    <a href="" class="text-muted">
+                                                                        <i class="fa-regular fa-comment"></i>{{$article->comments->count()}}
                                                                     </a>
                                                                 </li>
                                                             </ul>

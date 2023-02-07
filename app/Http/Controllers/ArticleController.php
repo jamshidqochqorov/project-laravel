@@ -13,4 +13,8 @@ class ArticleController extends Controller
         $articles = Article::paginate(9);
         return view('app.article.index',compact('articles','tags'));
     }
+    public function show($id){
+        $article = Article::find($id);
+        return view('app.article.show',compact('article'));
+    }
 }

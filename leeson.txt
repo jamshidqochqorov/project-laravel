@@ -6,3 +6,8 @@ php artisan make:model State -fm
  composer require barryvdh/laravel-ide-helper --dev
  composer require barryvdh/laravel-debugbar --dev
  php  artisan ui vue
+
+composer dump-autoload -o
+ "files": [
+            "app/Helpers/helpers.php"
+        ],
